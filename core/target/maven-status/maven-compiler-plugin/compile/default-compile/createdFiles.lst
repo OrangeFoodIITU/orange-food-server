@@ -1,0 +1,17 @@
+kz\orange\tm\core\model\RestaurantContact.class
+kz\orange\tm\core\model\UserBankInfo.class
+kz\orange\tm\core\service\GeneralService.class
+kz\orange\tm\core\controller\GeneralController.class
+kz\orange\tm\core\model\Reservation.class
+kz\orange\tm\core\service\IGeneralService.class
+kz\orange\tm\core\model\WorkingDaysType.class
+kz\orange\tm\core\model\CardType.class
+kz\orange\tm\core\model\Restaurant.class
+kz\orange\tm\core\model\AvgPrice.class
+kz\orange\tm\core\model\ReserveStatus.class
+kz\orange\tm\core\model\User.class
+kz\orange\tm\core\repository\CardTypeRepo.class
+kz\orange\tm\core\repository\AvgPriceJpaRepo.class
+kz\orange\tm\core\model\WorkingTime.class
+kz\orange\tm\core\model\RestaurantRoom.class
+kz\orange\tm\core\model\CuisineType.class
