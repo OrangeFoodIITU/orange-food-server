@@ -3,6 +3,7 @@ C:\orange\orange-food-server\core\src\main\java\kz\orange\tm\core\model\CardType
 C:\orange\orange-food-server\core\src\main\java\kz\orange\tm\core\model\Reservation.java
 C:\orange\orange-food-server\core\src\main\java\kz\orange\tm\core\model\Restaurant.java
 C:\orange\orange-food-server\core\src\main\java\kz\orange\tm\core\model\WorkingTime.java
+C:\orange\orange-food-server\core\src\main\java\kz\orange\tm\core\repository\ReservationRepo.java
 C:\orange\orange-food-server\core\src\main\java\kz\orange\tm\core\model\CuisineType.java
 C:\orange\orange-food-server\core\src\main\java\kz\orange\tm\core\model\User.java
 C:\orange\orange-food-server\core\src\main\java\kz\orange\tm\core\repository\CardTypeRepo.java
@@ -10,8 +11,10 @@ C:\orange\orange-food-server\core\src\main\java\kz\orange\tm\core\model\Restaura
 C:\orange\orange-food-server\core\src\main\java\kz\orange\tm\core\model\WorkingDaysType.java
 C:\orange\orange-food-server\core\src\main\java\kz\orange\tm\core\model\AvgPrice.java
 C:\orange\orange-food-server\core\src\main\java\kz\orange\tm\core\model\ReserveStatus.java
+C:\orange\orange-food-server\core\src\main\java\kz\orange\tm\core\repository\ReserveStatusRepo.java
 C:\orange\orange-food-server\core\src\main\java\kz\orange\tm\core\service\GeneralService.java
 C:\orange\orange-food-server\core\src\main\java\kz\orange\tm\core\model\UserBankInfo.java
 C:\orange\orange-food-server\core\src\main\java\kz\orange\tm\core\repository\AvgPriceJpaRepo.java
 C:\orange\orange-food-server\core\src\main\java\kz\orange\tm\core\service\IGeneralService.java
 C:\orange\orange-food-server\core\src\main\java\kz\orange\tm\core\model\RestaurantRoom.java
+C:\orange\orange-food-server\core\src\main\java\kz\orange\tm\core\repository\CuisineTypeRepo.java
