@@ -41,4 +41,7 @@ public interface IGeneralService {
 
     List<WorkingDaysType> getAllWorkingDaysType();
     WorkingDaysType getWorkingDaysTypeById(Integer id);
+
+    List<WorkingTime> getAllWorkingTime();
+    WorkingTime getWorkingTimeById(Integer id);
 }

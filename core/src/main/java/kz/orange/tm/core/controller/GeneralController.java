@@ -13,6 +13,7 @@ import kz.orange.tm.core.model.RestaurantRoom;
 import kz.orange.tm.core.model.User;
 import kz.orange.tm.core.model.UserBankInfo;
 import kz.orange.tm.core.model.WorkingDaysType;
+import kz.orange.tm.core.model.WorkingTime;
 
 import kz.orange.tm.core.service.IGeneralService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -117,6 +118,13 @@ public class GeneralController  {
     @GetMapping("/workingdaystype/{id}")
     public WorkingDaysType getWorkingDaysTypeById(@PathVariable(value = "id") Integer id){
         return service.getWorkingDaysTypeById(id);
+    }
+
+    @GetMapping("/workingtime")
+    public List<WorkingTime> getAllWorkingTime(){ return service.getAllWorkingTime(); }
+    @GetMapping("/workingtime/{id}")
+    public WorkingTime getWorkingTimeById(@PathVariable(value = "id") Integer id){
+        return service.getWorkingTimeById(id);
     }
 }
 

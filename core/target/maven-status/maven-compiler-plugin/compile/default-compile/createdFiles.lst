@@ -13,6 +13,7 @@ kz\orange\tm\core\repository\UserRepo.class
 kz\orange\tm\core\repository\CuisineTypeRepo.class
 kz\orange\tm\core\model\Reservation.class
 kz\orange\tm\core\repository\UserBankInfoRepo.class
+kz\orange\tm\core\repository\WorkingTimeRepo.class
 kz\orange\tm\core\service\IGeneralService.class
 kz\orange\tm\core\model\WorkingDaysType.class
 kz\orange\tm\core\model\CardType.class

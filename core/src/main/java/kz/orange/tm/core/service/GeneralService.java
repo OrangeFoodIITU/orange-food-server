@@ -34,6 +34,8 @@ public class GeneralService implements IGeneralService{
     UserBankInfoRepo userBankInfoRepo;
     @Autowired
     WorkingDaysTypeRepo workingDaysTypeRepo;
+    @Autowired
+    WorkingTimeRepo workingTimeRepo;
 
     @Override
     public List<AvgPrice> getAllAvgPrice() {
@@ -113,5 +115,11 @@ public class GeneralService implements IGeneralService{
     public List<WorkingDaysType> getAllWorkingDaysType() { return workingDaysTypeRepo.findAll();}
     @Override
     public WorkingDaysType getWorkingDaysTypeById(Integer id){return workingDaysTypeRepo.findOne(id);}
+
+
+    @Override
+    public List<WorkingTime> getAllWorkingTime() { return workingTimeRepo.findAll();}
+    @Override
+    public WorkingTime getWorkingTimeById(Integer id){return workingTimeRepo.findOne(id);}
 
 }
