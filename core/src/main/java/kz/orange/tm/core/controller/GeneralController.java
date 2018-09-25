@@ -6,6 +6,14 @@ import kz.orange.tm.core.model.CuisineType;
 import kz.orange.tm.core.model.Reservation;
 import kz.orange.tm.core.model.ReserveStatus;
 
+import kz.orange.tm.core.model.Restaurant;
+
+import kz.orange.tm.core.model.RestaurantContact;
+import kz.orange.tm.core.model.RestaurantRoom;
+import kz.orange.tm.core.model.User;
+import kz.orange.tm.core.model.UserBankInfo;
+import kz.orange.tm.core.model.WorkingDaysType;
+
 import kz.orange.tm.core.service.IGeneralService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -25,7 +33,6 @@ public class GeneralController  {
     public List<AvgPrice> getAllAvgPrice(){
         return  service.getAllAvgPrice();
     }
-
     @GetMapping("/avgprice/{id}")
     AvgPrice getById(@PathVariable(value = "id") Integer id){
         return service.getAvgPriceById(id);
@@ -54,7 +61,6 @@ public class GeneralController  {
     public List<Reservation> getAllReservation(){
         return service.getAllReservation();
     }
-
     @GetMapping("/reservation/{id}")
     public Reservation getReservationById(@PathVariable(value = "id") Integer id){
         return service.getReservationById(id);
@@ -70,5 +76,47 @@ public class GeneralController  {
     }
 
 
+    @GetMapping("/restaurant")
+    public List<Restaurant> getAllRestaurant(){ return service.getAllRestaurant(); }
+    @GetMapping("/restaurant/{id}")
+    public Restaurant getRestaurantById(@PathVariable(value = "id") Integer id){
+        return service.getRestaurantById(id);
+    }
+
+
+    @GetMapping("/restaurantcontact")
+    public List<RestaurantContact> getAllRestaurantContact(){ return service.getAllRestaurantContact(); }
+    @GetMapping("/restaurantcontact/{id}")
+    public RestaurantContact getRestaurantContactById(@PathVariable(value = "id") Integer id){
+        return service.getRestaurantContactById(id);
+    }
+
+    @GetMapping("/restaurantroom")
+    public List<RestaurantRoom> getAllRestaurantRoom(){ return service.getAllRestaurantRoom(); }
+    @GetMapping("/restaurantroom/{id}")
+    public RestaurantRoom getRestaurantRoomById(@PathVariable(value = "id") Integer id){
+        return service.getRestaurantRoomById(id);
+    }
+
+    @GetMapping("/user")
+    public List<User> getAllUser(){ return service.getAllUser(); }
+    @GetMapping("/user/{id}")
+    public User getUserById(@PathVariable(value = "id") Integer id){
+        return service.getUserById(id);
+    }
+
+    @GetMapping("/userbankinfo")
+    public List<UserBankInfo> getAllUserBankInfo(){ return service.getAllUserBankInfo(); }
+    @GetMapping("/userbankinfo/{id}")
+    public UserBankInfo getUserBankInfoById(@PathVariable(value = "id") Integer id){
+        return service.getUserBankInfoById(id);
+    }
+
+    @GetMapping("/workingdaystype")
+    public List<WorkingDaysType> getAllWorkingDaysType(){ return service.getAllWorkingDaysType(); }
+    @GetMapping("/workingdaystype/{id}")
+    public WorkingDaysType getWorkingDaysTypeById(@PathVariable(value = "id") Integer id){
+        return service.getWorkingDaysTypeById(id);
+    }
 }
 

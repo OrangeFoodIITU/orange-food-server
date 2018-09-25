@@ -24,4 +24,21 @@ public interface IGeneralService {
     ReserveStatus getReserveStatusById(Integer id);
 
 
+    List<Restaurant> getAllRestaurant();
+    Restaurant getRestaurantById(Integer id);
+
+    List<RestaurantContact> getAllRestaurantContact();
+    RestaurantContact getRestaurantContactById(Integer id);
+
+    List<RestaurantRoom> getAllRestaurantRoom();
+    RestaurantRoom getRestaurantRoomById(Integer id);
+
+    List<User> getAllUser();
+    User getUserById(Integer id);
+
+    List<UserBankInfo> getAllUserBankInfo();
+    UserBankInfo getUserBankInfoById(Integer id);
+
+    List<WorkingDaysType> getAllWorkingDaysType();
+    WorkingDaysType getWorkingDaysTypeById(Integer id);
 }
