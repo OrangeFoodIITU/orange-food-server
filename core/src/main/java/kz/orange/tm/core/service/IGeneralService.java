@@ -23,6 +23,5 @@ public interface IGeneralService {
     List<ReserveStatus> getAllReserveStatus();
     ReserveStatus getReserveStatusById(Integer id);
 
-    List<Restaurant> getAllRestaurant();
-    Restaurant getRestaurantById(Integer id);
+
 }
