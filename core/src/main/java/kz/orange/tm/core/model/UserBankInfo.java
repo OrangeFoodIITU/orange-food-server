@@ -11,6 +11,7 @@ public class UserBankInfo {
     private Integer cardTypeId;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     public int getId() {
         return id;
