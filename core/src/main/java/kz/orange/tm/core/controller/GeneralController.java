@@ -5,6 +5,7 @@ import kz.orange.tm.core.model.CardType;
 import kz.orange.tm.core.model.CuisineType;
 import kz.orange.tm.core.model.Reservation;
 import kz.orange.tm.core.model.ReserveStatus;
+import kz.orange.tm.core.model.Restaurant;
 
 import kz.orange.tm.core.service.IGeneralService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -54,6 +55,7 @@ public class GeneralController  {
     public List<Reservation> getAllReservation(){
         return service.getAllReservation();
     }
+
     @GetMapping("/reservation/{id}")
     public Reservation getReservationById(@PathVariable(value = "id") Integer id){
         return service.getReservationById(id);
@@ -66,6 +68,15 @@ public class GeneralController  {
     @GetMapping("/reservestatus/{id}")
     public ReserveStatus getReserveStatusById(@PathVariable(value = "id") Integer id){
         return service.getReserveStatusById(id);
+    }
+
+    @GetMapping("/restaurant")
+    public List<Restaurant> getAllRestaurant(){
+        return service.getAllRestaurant();
+    }
+    @GetMapping("/restaurant/{id}")
+    public Restaurant getRestaurantById(@PathVariable(value = "id") Integer id){
+        return service.getRestaurantById(id);
     }
 }
 

@@ -5,6 +5,8 @@ import kz.orange.tm.core.model.CardType;
 import kz.orange.tm.core.model.CuisineType;
 import kz.orange.tm.core.model.Reservation;
 import kz.orange.tm.core.model.ReserveStatus;
+import kz.orange.tm.core.model.Restaurant;
+
 
 import kz.orange.tm.core.repository.*;
 
@@ -26,6 +28,8 @@ public class GeneralService implements IGeneralService{
     ReservationRepo reservationRepo;
     @Autowired
     ReserveStatusRepo reserveStatusRepo;
+    @Autowired
+    RestaurantRepo restaurantRepo;
 
     @Override
     public List<AvgPrice> getAllAvgPrice() {
@@ -74,6 +78,17 @@ public class GeneralService implements IGeneralService{
     @Override
     public ReserveStatus getReserveStatusById(Integer id) {
         return reserveStatusRepo.findOne(id);
+    }
+
+
+    @Override
+    public List<Restaurant> getAllRestaurant(){
+        return restaurantRepo.findAll();
+    }
+
+    @Override
+    public Restaurant getRestaurantById(Integer id) {
+        return restaurantRepo.findOne(id);
     }
 
 }
