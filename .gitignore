@@ -1,4 +1,4 @@
 /.idea/
 *.iml
-/api/dist/
-/core/dist/
+/api/target/
+/core/target/
