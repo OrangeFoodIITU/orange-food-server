@@ -9,7 +9,6 @@ public class User {
     private String username;
     private String firstName;
     private String lastName;
-    private Integer restaurantId;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -52,15 +51,8 @@ public class User {
         this.lastName = lastName;
     }
 
-    @Basic
-    @Column(name = "restaurant_id")
-    public Integer getRestaurantId() {
-        return restaurantId;
-    }
 
-    public void setRestaurantId(Integer restaurantId) {
-        this.restaurantId = restaurantId;
-    }
+
 
     @Override
     public boolean equals(Object o) {
@@ -70,12 +62,11 @@ public class User {
         return id == user.id &&
                 Objects.equals(username, user.username) &&
                 Objects.equals(firstName, user.firstName) &&
-                Objects.equals(lastName, user.lastName) &&
-                Objects.equals(restaurantId, user.restaurantId);
+                Objects.equals(lastName, user.lastName) ;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, username, firstName, lastName, restaurantId);
+        return Objects.hash(id, username, firstName, lastName);
     }
 }
