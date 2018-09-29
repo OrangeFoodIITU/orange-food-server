@@ -4,8 +4,8 @@ import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
-@Table(name = "cuisine_type", schema = "orange_food_core", catalog = "")
-public class CuisineType {
+@Table(name = "cuisine", schema = "orange_food_core")
+public class Cuisine {
     private int id;
     private Integer restaurantId;
     private String name;
@@ -22,15 +22,6 @@ public class CuisineType {
         this.id = id;
     }
 
-    @Basic
-    @Column(name = "restaurant_id")
-    public Integer getRestaurantId() {
-        return restaurantId;
-    }
-
-    public void setRestaurantId(Integer restaurantId) {
-        this.restaurantId = restaurantId;
-    }
 
     @Basic
     @Column(name = "name")
@@ -56,15 +47,14 @@ public class CuisineType {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        CuisineType that = (CuisineType) o;
+        Cuisine that = (Cuisine) o;
         return id == that.id &&
-                Objects.equals(restaurantId, that.restaurantId) &&
                 Objects.equals(name, that.name) &&
                 Objects.equals(description, that.description);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, restaurantId, name, description);
+        return Objects.hash(id, name, description);
     }
 }

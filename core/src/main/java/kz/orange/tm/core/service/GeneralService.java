@@ -17,7 +17,7 @@ public class GeneralService implements IGeneralService{
     @Autowired
     CardTypeRepo cardTypeRepo;
     @Autowired
-    CuisineTypeRepo cuisineTypeRepo;
+    CuisineRepo cuisineRepo;
     @Autowired
     ReservationRepo reservationRepo;
     @Autowired
@@ -57,12 +57,12 @@ public class GeneralService implements IGeneralService{
 
 
     @Override
-    public List<CuisineType> getAllCuisineType(){
-        return cuisineTypeRepo.findAll();
+    public List<Cuisine> getAllCuisineType(){
+        return cuisineRepo.findAll();
     }
     @Override
-    public CuisineType getCuisineTypeById(Integer id) {
-        return cuisineTypeRepo.findOne(id);
+    public Cuisine getCuisineTypeById(Integer id) {
+        return cuisineRepo.findOne(id);
     }
 
 

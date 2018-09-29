@@ -13,8 +13,8 @@ public interface IGeneralService {
     List<CardType> getAllCardType();
     CardType getCardTypeById(Integer id);
 
-    List<CuisineType> getAllCuisineType();
-    CuisineType getCuisineTypeById(Integer id);
+    List<Cuisine> getAllCuisineType();
+    Cuisine getCuisineTypeById(Integer id);
 
 
     List<Reservation> getAllReservation();

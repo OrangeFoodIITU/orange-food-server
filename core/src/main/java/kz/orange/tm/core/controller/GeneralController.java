@@ -1,19 +1,7 @@
 package kz.orange.tm.core.controller;
 
-import kz.orange.tm.core.model.AvgPrice;
-import kz.orange.tm.core.model.CardType;
-import kz.orange.tm.core.model.CuisineType;
-import kz.orange.tm.core.model.Reservation;
-import kz.orange.tm.core.model.ReserveStatus;
-
-import kz.orange.tm.core.model.Restaurant;
-
-import kz.orange.tm.core.model.RestaurantContact;
-import kz.orange.tm.core.model.RestaurantRoom;
-import kz.orange.tm.core.model.User;
-import kz.orange.tm.core.model.UserBankInfo;
-import kz.orange.tm.core.model.WorkingDaysType;
-import kz.orange.tm.core.model.WorkingTime;
+import kz.orange.tm.core.model.*;
+import kz.orange.tm.core.model.Cuisine;
 
 import kz.orange.tm.core.service.IGeneralService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -49,11 +37,11 @@ public class GeneralController  {
     }
 
     @GetMapping("/cuisinetype")
-    public List<CuisineType> getAllCuisineType(){
+    public List<Cuisine> getAllCuisineType(){
         return service.getAllCuisineType();
     }
     @GetMapping("/cuisineype/{id}")
-    public CuisineType getCuisineTypeById(@PathVariable(value = "id") Integer id){
+    public Cuisine getCuisineTypeById(@PathVariable(value = "id") Integer id){
         return service.getCuisineTypeById(id);
     }
 
