@@ -2,6 +2,7 @@ package kz.orange.tm.core.controller;
 
 import kz.orange.tm.core.model.*;
 import kz.orange.tm.core.model.Cuisine;
+import kz.orange.tm.core.model.RestaurantCuisineMap;
 
 import kz.orange.tm.core.service.IGeneralService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,7 +41,7 @@ public class GeneralController  {
     public List<Cuisine> getAllCuisineType(){
         return service.getAllCuisineType();
     }
-    @GetMapping("/cuisineype/{id}")
+    @GetMapping("/cuisinetype/{id}")
     public Cuisine getCuisineTypeById(@PathVariable(value = "id") Integer id){
         return service.getCuisineTypeById(id);
     }
@@ -72,6 +73,12 @@ public class GeneralController  {
         return service.getRestaurantById(id);
     }
 
+    @GetMapping("/restaurantcuisinemap")
+    public List<RestaurantCuisineMap> getAllRestaurantCuisineMap(){ return service.getAllRestaurantCuisineMap(); }
+    @GetMapping("/restaurantcuisinemap/{id}")
+    public RestaurantCuisineMap getRestaurantCuisineMapById(@PathVariable(value = "id") Integer id){
+        return service.getRestaurantCuisineMapById(id);
+    }
 
     @GetMapping("/restaurantcontact")
     public List<RestaurantContact> getAllRestaurantContact(){ return service.getAllRestaurantContact(); }

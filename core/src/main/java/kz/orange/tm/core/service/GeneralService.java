@@ -27,6 +27,8 @@ public class GeneralService implements IGeneralService{
     @Autowired
     RestaurantContactRepo restaurantContactRepo;
     @Autowired
+    RestaurantCuisineMapRepo restaurantCuisineMapRepo;
+    @Autowired
     RestaurantRoomRepo restaurantRoomRepo;
     @Autowired
     UserRepo userRepo;
@@ -95,6 +97,12 @@ public class GeneralService implements IGeneralService{
     public List<RestaurantContact> getAllRestaurantContact() { return restaurantContactRepo.findAll();}
     @Override
     public RestaurantContact getRestaurantContactById(Integer id){return restaurantContactRepo.findOne(id);}
+
+    @Override
+    public List<RestaurantCuisineMap> getAllRestaurantCuisineMap() { return restaurantCuisineMapRepo.findAll();}
+    @Override
+    public RestaurantCuisineMap getRestaurantCuisineMapById(Integer id){return restaurantCuisineMapRepo.findOne(id);}
+
 
     @Override
     public List<RestaurantRoom> getAllRestaurantRoom() { return restaurantRoomRepo.findAll();}

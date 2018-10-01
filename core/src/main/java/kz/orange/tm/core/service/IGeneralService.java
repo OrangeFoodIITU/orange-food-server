@@ -30,6 +30,9 @@ public interface IGeneralService {
     List<RestaurantContact> getAllRestaurantContact();
     RestaurantContact getRestaurantContactById(Integer id);
 
+    List<RestaurantCuisineMap> getAllRestaurantCuisineMap();
+    RestaurantCuisineMap getRestaurantCuisineMapById(Integer id);
+
     List<RestaurantRoom> getAllRestaurantRoom();
     RestaurantRoom getRestaurantRoomById(Integer id);
 
