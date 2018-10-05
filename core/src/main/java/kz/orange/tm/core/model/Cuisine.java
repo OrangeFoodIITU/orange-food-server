@@ -7,7 +7,6 @@ import java.util.Objects;
 @Table(name = "cuisine", schema = "orange_food_core")
 public class Cuisine {
     private int id;
-    private Integer restaurantId;
     private String name;
     private String description;
 

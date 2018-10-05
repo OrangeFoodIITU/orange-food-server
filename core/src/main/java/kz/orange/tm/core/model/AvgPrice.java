@@ -34,7 +34,7 @@ public class AvgPrice {
 
     @Basic
     @Column(name = "avg_price_min")
-    public Integer getAvgPriceMin() {
+    Integer getAvgPriceMin() {
         return avgPriceMin;
     }
 
