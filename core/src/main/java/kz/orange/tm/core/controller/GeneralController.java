@@ -6,10 +6,7 @@ import kz.orange.tm.core.model.RestaurantCuisineMap;
 
 import kz.orange.tm.core.service.IGeneralService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -95,6 +92,7 @@ public class GeneralController  {
     }
 
     @GetMapping("/user")
+    //@CrossOrigin(origins = "http://localhost:4200")
     public List<User> getAllUser(){ return service.getAllUser(); }
     @GetMapping("/user/{id}")
     public User getUserById(@PathVariable(value = "id") Integer id){
